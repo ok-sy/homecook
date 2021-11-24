@@ -21,7 +21,7 @@
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/resources/**" location="/resources/" />	
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -64,5 +64,7 @@
 	<aop:aspectj-autoproxy/>
 	<!-- 예약작업 어노테이션방식 사용 성언 -->
 	<task:annotation-driven/>
+	
+	<context:component-scan base-package="kr.or.main" />
 	
 </beans:beans>
